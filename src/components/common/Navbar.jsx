@@ -15,7 +15,7 @@ export const Navbar = () => {
     const {token}=useSelector((state)=>state.auth);
     const {totalItems}=useSelector((state)=>state.cart);
 
-    console.log("userdata=",user)
+    // console.log("userdata=",user)
     const fetchData=async()=>{
         // console.log(Base_url)
       const result =await apiConnector("get",`${categories.CATEGORIES_API}`)
@@ -49,7 +49,7 @@ export const Navbar = () => {
                                 {
                                    catlist&&catlist?.map((cat, index) => {
                                         return (
-                                        <li key={cat._id}>    <Link key={index} to={`/catalog/${cat.name}`} className='text-richblack-
+                                        <li key={cat._id}>    <Link key={index} to={`/catalog/${cat.name.toLowerCase()}`} className='text-richblack-
                                             5 hover:text-richblack-1'>{cat.name}</Link> </li>
                                             )
                                         })
