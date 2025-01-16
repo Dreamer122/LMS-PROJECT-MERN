@@ -16,7 +16,7 @@ export const endpoints = {
     GET_USER_ENROLLED_COURSES_API: BASE_URL + "/profile/getEnrolledCourses",
   }
   
-  // STUDENTS ENDPOINTS
+  // STUDENTS ENDPOINTS payment
   export const studentEndpoints = {
     COURSE_PAYMENT_API: BASE_URL + "/payment/capturePayment",
     COURSE_VERIFY_API: BASE_URL + "/payment/verifyPayment",

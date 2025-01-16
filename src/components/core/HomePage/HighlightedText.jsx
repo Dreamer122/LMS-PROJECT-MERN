@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
- const HighlightedText = ({children}) => {
+const HighlightedText = ({text}) => {
   return (
-   <>
-   <span className='text-blue-100 font-inter font-bold'>
-{children}
-   </span>
-   </>
-  )
-}
-export default HighlightedText
+    <span className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold">
+      {" "}
+      {text}
+    </span>
+  );
+};
+
+export default HighlightedText;

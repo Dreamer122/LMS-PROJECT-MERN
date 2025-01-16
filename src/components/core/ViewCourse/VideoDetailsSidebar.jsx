@@ -18,7 +18,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
     totalNoOfLectures,
     completedLectures,
   } = useSelector((state) => state.viewCourse)
-
+console.log("video detail sidebar")
   useEffect(() => {
     ;(() => {
       if (!courseSectionData.length) return

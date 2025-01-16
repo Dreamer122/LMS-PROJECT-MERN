@@ -5,7 +5,7 @@ import CountryCode from "../../data/countrycode.json"
 import { apiConnector } from "../../services/apiconnector"
 import { contactusEndpoint } from "../../services/apis"
 
-const ContactUsForm = () => {
+ const ContactUsForm = () => {
   const [loading, setLoading] = useState(false)
   const {
     register,

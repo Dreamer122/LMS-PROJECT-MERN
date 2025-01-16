@@ -2,7 +2,7 @@ const { instance } = require("../config/razorpay")
 const Course = require("../Models/Course")
 const crypto = require("crypto")
 const User = require("../Models/User")
-const mailSender = require("../utils/mailSender")
+const {mailSender} = require("../Utils/mailSender")
 const mongoose = require("mongoose")
 const {
   courseEnrollmentEmail,
@@ -35,7 +35,7 @@ exports.capturePayment = async (req, res) => {
 
       // Check if the user is already enrolled in the course
       const uid = new mongoose.Types.ObjectId(userId)
-      if (course.studentsEnroled.includes(uid)) {
+      if (course.studentsEnrolled.includes(uid)) {
         return res
           .status(200)
           .json({ success: false, message: "Student is already Enrolled" })
@@ -151,7 +151,7 @@ const enrollStudents = async (courses, userId, res) => {
       // Find the course and enroll the student in it
       const enrolledCourse = await Course.findOneAndUpdate(
         { _id: courseId },
-        { $push: { studentsEnroled: userId } },
+        { $push: { studentsEnrolled: userId } },
         { new: true }
       )
 

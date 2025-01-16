@@ -116,3 +116,4 @@ export function ResetPassword() {
   )
 }
 
+// export default UpdatePassword
